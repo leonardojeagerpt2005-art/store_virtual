@@ -40,3 +40,5 @@ For example:
 * Lists
 * Loops
 * User input
+![architrcture Diagram](Diagramadeflujodepython.drawio.png)
+
