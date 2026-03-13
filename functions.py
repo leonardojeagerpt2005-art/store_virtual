@@ -10,38 +10,39 @@ def register_sale():
     print("-" * 30)
 
     # Validate product name
-    while True:
+    product = ""
+    while product == "":
         product = input("Enter product name: ").strip()
 
         if product == "":
             print("⚠ Product name cannot be empty.")
-        else:
-            break
 
     # Validate unit price
-    while True:
+    price_valid = False
+
+    while price_valid == False:
         try:
             price = float(input("Enter unit price: "))
 
             if price < 0:
                 print("⚠ Price cannot be negative.")
-                continue
-
-            break
+            else:
+                price_valid = True
 
         except ValueError:
             print("⚠ Invalid input. Please enter a numeric value.")
 
     # Validate quantity
-    while True:
+    quantity_valid = False
+
+    while quantity_valid == False:
         try:
             quantity = int(input("Enter quantity sold: "))
 
             if quantity < 0:
                 print("⚠ Quantity cannot be negative.")
-                continue
-
-            break
+            else:
+                quantity_valid = True
 
         except ValueError:
             print("⚠ Invalid input. Please enter a whole number.")
@@ -102,3 +103,5 @@ def show_summary():
         print("-" * 20)
 
     print(f"\n💰 Total revenue: ${total_revenue}")
+
+    
