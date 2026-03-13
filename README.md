@@ -40,5 +40,5 @@ For example:
 * Lists
 * Loops
 * User input
-![architrcture Diagram](Diagramadeflujodepython.drawio.png)
+![architrcture Diagram](Capturadesde2026-03-1306-29-49.png)
 
