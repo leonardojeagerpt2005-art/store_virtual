@@ -28,15 +28,16 @@ print(f"\n✅ Welcome {customer_name}! You can now register sales.\n")
 print("-" * 50)
 
 # Ask how many sales the user wants to register
-while True:
+sales_valid = False
+
+while sales_valid == False:
     try:
         sales_to_register = int(input("📦 How many sales would you like to register initially?: "))
 
         if sales_to_register < 0:
             print("⚠ Number cannot be negative.")
-            continue
-
-        break
+        else:
+            sales_valid = True
 
     except ValueError:
         print("⚠ Please enter a valid number.")
